@@ -1,8 +1,8 @@
-﻿# Hi, I'm Haris 👋
+﻿# Hi, I'm Harish 👋
 
-**Data Engineer · Pipelines, Warehousing & Analytics**
+**Data Science · Agentic AI · Data Engineering**
 
-I build data systems that are reliable, observable, and easy to reason about, from raw ingestion to clean, trusted tables.
+I build AI agents and data systems that are reliable, observable, and honest about what they don't know.
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hkandan-hash)
 
@@ -10,46 +10,66 @@ I build data systems that are reliable, observable, and easy to reason about, fr
 
 ## 🧭 About Me
 
-I'm a student at Saint Peter's University focused on data engineering. I like asking:
+I'm pursuing a Master's in Data Science at Saint Peter's University. Before that, I spent two years as a Software Engineer at Tata Consultancy Services building microservices for a telecom billing product, including a rating engine that processed over a million call detail records.
 
-- What happens when this job fails halfway?
-- How will I know the data is wrong before a stakeholder does?
-- Can this pipeline be re-run safely?
+Questions I keep asking about anything I build:
 
-Things I've built or am building:
-
-- Batch and streaming ETL pipelines
-- A dimensional model in a cloud-style warehouse
-- Data quality checks and monitoring
+- How do I know this answer is right, and what happens when it isn't?
+- Can I see what the system did, step by step, after the fact?
+- Is it safe to re-run?
 
 ---
 
 ## 🛠️ Technologies I Work With
 
 ### Languages
-- **Python**: pandas, PySpark, scripting and automation
-- **SQL**: window functions, CTEs, performance tuning
+- **Python**, **TypeScript**, **Java**, **SQL**
 
-### Pipelines & Orchestration
-- **Apache Airflow**: scheduling, retries, backfills
-- **Kafka**: event streaming
-- **dbt**: transformations, tests, documentation
+### AI & Agents
+- **LangGraph / LangGraph.js**: agent state machines, tool calling, retry and escalation loops
+- **Claude on Amazon Bedrock**: via the Anthropic SDK
+- **Hugging Face Transformers, Sentence-Transformers, PyTorch**: local embedding and QA models
 
-### Storage & Warehousing
-- **PostgreSQL / SQLite / DuckDB**: local and relational storage
-- **Snowflake / BigQuery**: analytical warehouses
+### Data
+- **pandas**, **SQLite**, **MySQL**, **Cassandra**, **Kafka**, **Redis**
 
-### Infrastructure & Delivery
-- **Docker**: reproducible environments
-- **GitHub Actions**: CI for tests and linting
-- **AWS**: S3, Lambda, Glue
+### Cloud & Observability
+- **AWS**: Lambda, Bedrock, S3, CloudFront, CloudWatch, CDK
+- **OpenTelemetry**: tracing across agent steps
+- **Datadog**
 
-### Analytics
-- **Jupyter, Matplotlib, Plotly**: exploration and visualization
+### Frontend & Delivery
+- **React**, **Vite**, **Chart.js**
+- **Docker**, **GitHub Actions**, **Jenkins**, **Spring Boot**
 
 ---
 
 ## 🚀 Featured Projects
+
+### [Portfolio Monitoring Agent](https://github.com/hkandan-hash/portfolio-monitoring-agent)
+An agentic AI assistant for an investment team. It answers questions about allocation drift, manager performance and meeting notes by calling tools in parallel, and every run is traced.
+
+**Engineering work**
+- LangGraph.js agent loop with an iteration cap, and tool failures returned to the model instead of crashing the run
+- Claude on Amazon Bedrock with a refusal fallback, plus an offline planner so it runs and tests without cloud access
+- OpenTelemetry spans per graph node, model call and tool, CloudWatch EMF metrics, and trace-linked JSON logs
+- React UI with run metrics and a trace waterfall; AWS CDK stack with a CloudWatch dashboard and alarms
+
+**Built with:** `TypeScript` · `LangGraph.js` · `Amazon Bedrock` · `OpenTelemetry` · `React` · `AWS CDK`
+
+### [Agentic Support Triage](https://github.com/hkandan-hash/agentic-support-triage)
+A LangGraph agent that routes support questions, retrieves passages with sentence embeddings, and extracts answers with a transformer QA model. When it isn't confident it broadens its search and retries, then escalates to a human instead of guessing.
+
+**Engineering work**
+- Evaluated on 11 questions: 11/11 routing and 7/9 correct answers, up from 5/11 and 3/9 in the first version
+- Graph tests with scripted fake models, so CI runs without downloading models
+
+**Built with:** `Python` · `LangGraph` · `Transformers` · `PyTorch` · `pytest`
+
+### [US Weather Analytics Dashboard](https://github.com/hkandan-hash/us-weather-analytics) · [live](https://hkandan-hash.github.io/us-weather-analytics/)
+A year of daily weather for four US cities, cleaned and aggregated with pandas and explored in an interactive dashboard.
+
+**Built with:** `Python` · `pandas` · `Chart.js` · `GitHub Pages`
 
 ### [Weather Ingestion Pipeline](https://github.com/hkandan-hash/weather-ingestion-pipeline)
 Ingests hourly weather data from the Open-Meteo API, validates it, and loads it into a SQLite warehouse.
@@ -57,7 +77,6 @@ Ingests hourly weather data from the Open-Meteo API, validates it, and loads it 
 **Engineering problems explored**
 - Idempotent upserts and safe re-runs
 - Immutable raw layer and data quality checks
-- Unit tests and CI with GitHub Actions
 
 **Built with:** `Python` · `SQLite` · `pytest` · `GitHub Actions`
 
@@ -66,16 +85,16 @@ Ingests hourly weather data from the Open-Meteo API, validates it, and loads it 
 ## 🎯 What I'm Working On
 
 ```
-Data Engineering
-├── Pipelines
-│   ├── Orchestration with Airflow
-│   └── Idempotent, incremental loads
-├── Quality
-│   ├── Tests with dbt
-│   └── Monitoring and alerting
-└── Scale
-    ├── Spark fundamentals
-    └── Cloud warehousing
+Agentic AI
+├── Evaluation
+│   ├── Measuring agent accuracy, not just demoing it
+│   └── Honest failure modes: retry, escalate, refuse
+├── Observability
+│   ├── Tracing every model and tool call
+│   └── Metrics and alarms that catch regressions
+└── Data
+    ├── Reliable ingestion and quality checks
+    └── Cloud data platforms
 ```
 
 ---
@@ -85,13 +104,13 @@ Data Engineering
 ```
 Define the question
         ↓
-Ingest raw, keep it immutable
+Build the smallest thing that answers it
         ↓
-Validate early, fail loudly
+Measure it against real cases
         ↓
-Transform in small, tested steps
+Trace it, so failures are explainable
         ↓
-Monitor, document, iterate
+Fix what the measurements show, then repeat
 ```
 
 ---
@@ -105,6 +124,4 @@ Monitor, document, iterate
 
 ## 🤝 Let's Connect
 
-I'm open to data engineering internships and collaborations. Feel free to reach out through GitHub.
-
-
+I'm open to data science, AI and data engineering internships and collaborations. Feel free to reach out through GitHub.
