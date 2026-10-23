@@ -31,7 +31,7 @@ Questions I keep asking about anything I build:
 - **Hugging Face Transformers, Sentence-Transformers, PyTorch**: local embedding and QA models
 
 ### Data
-- **pandas**, **scikit-learn**, **statsmodels**, **Tableau**, **SQLite**, **MySQL**, **Cassandra**, **Kafka**, **Redis**
+- **pandas**, **scikit-learn**, **statsmodels**, **Tableau**, **dbt**, **Snowflake**, **DuckDB**, **SQLite**, **MySQL**, **Cassandra**, **Kafka**, **Redis**
 
 ### Cloud & Observability
 - **AWS**: Lambda, Bedrock, S3, CloudFront, CloudWatch, CDK
@@ -56,6 +56,16 @@ An end-to-end analysis of 186,524 New Jersey mortgage applications from public H
 - Tableau workbook generated from the analysis with Hyper extracts, so every number matches the reports
 
 **Built with:** `Python` · `pandas` · `scikit-learn` · `statsmodels` · `Tableau` · `GitHub Actions`
+
+### [Citi Bike Jersey City Analytics](https://github.com/hkandan-hash/citibike-analytics) · [dbt docs](https://hkandan-hash.github.io/citibike-analytics/)
+An end-to-end data engineering and analytics project on 971,486 real bike-share trips: Python ETL into a warehouse (DuckDB locally, Snowflake in the cloud), dbt models and tests, analysis, and Tableau.
+
+**Engineering and analysis work**
+- Idempotent extract and load from the public Citi Bike S3 bucket and the Open-Meteo weather API
+- dbt staging → intermediate → core → analytics layers with tests and published lineage docs
+- Found that 10 of 114 stations account for 53% of daily rebalancing need, and that each millimetre of rain is associated with about 46 fewer trips once temperature is held fixed
+
+**Built with:** `Python` · `dbt` · `Snowflake` · `DuckDB` · `SQL` · `Tableau` · `GitHub Actions`
 
 ### [Portfolio Monitoring Agent](https://github.com/hkandan-hash/portfolio-monitoring-agent)
 An agentic AI assistant for an investment team. It answers questions about allocation drift, manager performance and meeting notes by calling tools in parallel, and every run is traced.
