@@ -31,7 +31,7 @@ Questions I keep asking about anything I build:
 - **Hugging Face Transformers, Sentence-Transformers, PyTorch**: local embedding and QA models
 
 ### Data
-- **pandas**, **SQLite**, **MySQL**, **Cassandra**, **Kafka**, **Redis**
+- **pandas**, **scikit-learn**, **statsmodels**, **Tableau**, **SQLite**, **MySQL**, **Cassandra**, **Kafka**, **Redis**
 
 ### Cloud & Observability
 - **AWS**: Lambda, Bedrock, S3, CloudFront, CloudWatch, CDK
@@ -45,6 +45,17 @@ Questions I keep asking about anything I build:
 ---
 
 ## 🚀 Featured Projects
+
+### [NJ Mortgage Lending Analytics](https://github.com/hkandan-hash/nj-mortgage-analytics) · [Tableau Public](https://public.tableau.com/app/profile/harish.kandan/viz/NJ_Mortgage_Lending_Dashboard/NewJerseyMortgageLending) · [web dashboard](https://hkandan-hash.github.io/nj-mortgage-analytics/)
+An end-to-end analysis of 186,524 New Jersey mortgage applications from public HMDA data: ingestion, EDA, regression on loan pricing, denial classification, a fairness audit, and a Tableau Story with five interactive dashboards.
+
+**Analysis work**
+- Out-of-time evaluation (train 2023, test 2024): gradient boosting reaches ROC AUC 0.848 for denials and R² 0.465 for pricing
+- OLS with robust errors, Ridge, Lasso and quantile regression; cross-fitted target encoding of lenders without leakage
+- Fairness audit of pricing gaps and error rates by group, with protected attributes kept out of the models
+- Tableau workbook generated from the analysis with Hyper extracts, so every number matches the reports
+
+**Built with:** `Python` · `pandas` · `scikit-learn` · `statsmodels` · `Tableau` · `GitHub Actions`
 
 ### [Portfolio Monitoring Agent](https://github.com/hkandan-hash/portfolio-monitoring-agent)
 An agentic AI assistant for an investment team. It answers questions about allocation drift, manager performance and meeting notes by calling tools in parallel, and every run is traced.
