@@ -4,6 +4,7 @@
 
 I build AI agents and data systems that are reliable, observable, and honest about what they don't know.
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-hkandan--hash.github.io-7ce8b5?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hkandan-hash.github.io)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hkandan-hash)
 
 ---
@@ -146,3 +147,5 @@ Fix what the measurements show, then repeat
 ## 🤝 Let's Connect
 
 I'm open to data science, AI and data engineering internships and collaborations. Feel free to reach out through GitHub.
+
+🌐 **Portfolio:** [hkandan-hash.github.io](https://hkandan-hash.github.io): all my projects in one place.
